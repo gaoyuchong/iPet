@@ -1,6 +1,4 @@
-<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="log">授权登录</button>
-<image wx:if="{{canIUse}}" class='background' src="../../images/denglu.jpg" mode="aspectFill"></image>
-<view wx:else>
+<view>
 <view class="bg" style="opacity:{{0.5}}">
     <image class="bg-image" mode="scaleToFill">
     </image>

@@ -72,7 +72,7 @@
 }
 .into{
   width:80%;
-  margin-top:40rpx;
+  margin-top:20rpx;
   background-color: rgb(199,237,233);
   color: rgb(175,215,237);
   border-radius: 98rpx;
@@ -81,7 +81,7 @@
 }
 .ai{
   width:80%;
-  margin-top:40rpx;
+  margin-top:20rpx;
   background-color: rgb(200,200,169);
   color: rgb(249,205,173);
   border-radius: 98rpx;
@@ -90,7 +90,7 @@
 }
 .konw{
   width:80%;
-  margin-top:40rpx;
+  margin-top:20rpx;
   background-color: rgb(1,158,213);
   color: rgb(255,255,255);
   border-radius: 98rpx;
@@ -146,7 +146,7 @@
   }
   .save{
     width:80%;
-    margin-top:40rpx;
+    margin-top:20rpx;
     background-color: rgb(84, 230, 40);
     color: rgb(176, 236, 226);
     border-radius: 98rpx;

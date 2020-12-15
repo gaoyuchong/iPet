@@ -1,6 +1,5 @@
 <view >
-  <image class='bg-image' src="../../pic/bg.jpg" mode="aspectFill"></image>
-  
+  <image class='bg-image' src="../../images/bg.jpg" mode="aspectFill"></image>
   <view class="container1">
   <text class="tem">这里是{{id}}的家哦~</text>
   <text class="date">  {{id}}陪伴了我{{date1}}天</text>
@@ -28,13 +27,16 @@
 <button bindtap="bindViewTab" class="konw">
   <navigator url="../next/next" open-type="redirect">敲敲黑板</navigator>
 </button>
-<button bindtap="ai" class="ai">
+<button class="ai">
   <navigator url="../contact/contact" open-type="redirect">聊天</navigator>
 </button>
 <button bindtap="save" class="save">
   保存数据
 </button>
-</view>
+</view><view >
+<button bindtap="denglu" class="as">
+  <navigator url="../denglu/denglu" open-type="redirect">登录</navigator>
+</button></view>
 <view >
   <button class="show-btn" bindtap="changeYL">
     <icon class="iconfont icon-bangzhu" ></icon>
@@ -44,7 +46,7 @@
 <view class="modal-mask" bindtap="hideModal"  wx:if="{{showModal}}"></view>
 
 <view class="modal-dialog" wx:if="{{showModal}}">
-  <image class='view-image'src="../../pic/提示.jpg"></image>
+  <image class='view-image'src="../../images/tishi.jpg"></image>
 </view>
 </view>
 

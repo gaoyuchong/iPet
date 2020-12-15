@@ -12,6 +12,7 @@
   height:800px;
 }
 .lan{
+display:flex;
 position: fixed;
 bottom: 0;
 z-index: 10;
@@ -21,7 +22,7 @@ padding: 10px 0 0 5px;
 background-color:rgba(230,230,230,0.8);
 }
 .lan input{
-  width: 67%;
+  width: 65%;
   height: 24px;
   border: 1px solid gray;
   float: left;
@@ -73,3 +74,4 @@ background-color:rgba(230,230,230,0.8);
   border-radius: 10rpx;
   z-index: 10;
 }
+

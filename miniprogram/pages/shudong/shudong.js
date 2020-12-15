@@ -1,10 +1,9 @@
 Page({
   data: {
-
     value: '',
     lan: '',
     toView: 'msg-10',
-    chat_list: []
+    chat_list: [],
   },
   onLoad: function () {
     var that=this;
@@ -31,6 +30,24 @@ Page({
     this.setData({
       value: e.detail.value
     })
+    var that=this;
+    var token=wx.getStorageSync('token')
+    wx.request({
+      url:"https://api.weixin.qq.com/wxa/msg_sec_check?access_token="+token,
+      method:'POST',
+      data:{
+        content:that.data.value
+      },
+    success:function(res){
+      console.log(res)
+      if(res.data.errcode==87014){
+        that.setData({
+          value:" "
+        }) 
+     
+         }
+    },
+  })
   },
   tap1: function () {
     var that = this;

@@ -24,14 +24,13 @@
           <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='../../images/self.jpg'></image>
         </view>
       </view>
-
     </block>
     <view class="block_div"></view>
   </scroll-view>
   <view class="lan">
     <button>
-<navigator url="/pages/shudong/shudong" class="shudong">树洞</navigator></button>
-    <input bindinput="input1" value="{{value}}"placeholder="在这里和小冲发消息哦~" />
+<navigator url="/pages/shudong/shudong" >树洞</navigator></button>
+    <input bindinput="input1" value="{{value}}"placeholder="{{id}}在这里哦~" />
     <button bindtap="tap1">send</button>
   </view>
 </view>

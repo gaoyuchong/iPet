@@ -3,6 +3,7 @@ const app = getApp()
 
 Page({
   data: {
+    denglu:true,
     sign: true,
     id: "",
     date1: '0',
@@ -11,66 +12,63 @@ Page({
     growth: 0,
     now: "开心~~~",
     bind: 0,
-    pict: "../../pic/原始状态.jpg",
+    pict: "../../images/yuan.jpg",
   },
   one: function () {
     var that = this;
-    if (this.data.health < 100) {
+   
       that.setData({
         health: that.data.health + 1,
-        pict: "../../pic/吃饱.jpg",
+        pict: "../../images/bao.jpg",
       })
       setTimeout(function () {
         that.setData({
-          pict: "../../pic/原始状态.jpg"
+          pict: "../../images/yuan.jpg"
         })
       }, 2000)
-    }
+    
   },
 
   two: function () {
     var that = this;
-    if (this.data.health < 100) {
       that.setData({
         health: that.data.health - 1,
         growth: that.data.growth + 1,
-        pict: "../../pic/睡觉.gif",
+        pict: "../../images/shui.gif",
       })
       setTimeout(function () {
         that.setData({
-          pict: "../../pic/原始状态.jpg"
+          pict: "../../images/yuan.jpg"
         })
       }, 2000)
-    }
+    
 
   },
   three: function () {
     var that = this;
-    if (this.data.feeling >= 0) {
       that.setData({
         feeling: that.data.feeling - 1,
-      })
-    }
-    if (this.data.growth < 100) {
-      that.setData({
+        pict: "../../images/guai.jpg",
         growth: that.data.growth + 1,
-      })
-    }
-
-  },
-  four: function () {
-    var that = this;
-    if (this.data.feeling < 100) {
-      that.setData({
-        feeling: that.data.feeling + 1,
-        pict: "../../pic/开心.jpg",
       })
       setTimeout(function () {
         that.setData({
-          pict: "../../pic/原始状态.jpg"
+          pict: "../../images/yuan.jpg"
         })
       }, 2000)
-    }
+  },
+  four: function () {
+    var that = this;
+      that.setData({
+        feeling: that.data.feeling + 1,
+        pict: "../../images/happy.jpg",
+      })
+      setTimeout(function () {
+        that.setData({
+          pict: "../../images/yuan.jpg"
+        })
+      }, 2000)
+    
 
   },
   five: function () {
@@ -78,11 +76,11 @@ Page({
     if (this.data.now == "生病") {
       that.setData({
         health: that.data.health + 1,
-        pict: "../../pic/乖巧.jpg",
+        pict: "../../images/yao.jpg",
       })
       setTimeout(function () {
         that.setData({
-          pict: "../../pic/原始状态.jpg"
+          pict: "../../images/yuan.jpg"
         })
       }, 2000)
     }
@@ -99,29 +97,18 @@ Page({
         intomodal: false
       })
   },
-  ai: function () {
-
-  },
-
   changeYL: function () {
     this.setData({
       showModal: true
     })
   },
-
   hideModal: function () {
     this.setData({
       showModal: false
     });
   },
 
-  onLoad: function (e) {
-    var id = e.id
-
-    this.setData({
-      id: id
-    })
-  },
+  
 
   onGetUserInfo: function (e) {
     if (!this.data.logged && e.detail.userInfo) {
@@ -212,7 +199,16 @@ Page({
     let cur_time = this.getDate();
     this.add_item_by_database(db,'company',{value: this.data.date1,date: cur_time})
   },
-  onLoad: function () {
+  onLoad: function (e) {  
+    var id = e.id
+        this.setData({
+          id: id
+        })
+    var id=wx.getStorageSync('id')
+    this.setData({
+      id:id
+    })
+    
     if (this.data.health < 20) {
       this.setData({
         now: "生病"
@@ -303,7 +299,6 @@ Page({
         db.collection(db_name).doc(del_id).remove({
           success: function(res) {
             console.log(res.data);
-            
           }
         })
       }

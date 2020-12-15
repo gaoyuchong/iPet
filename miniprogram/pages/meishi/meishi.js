@@ -34,7 +34,7 @@ input2:function(e){
     data:{
       region:that.data.region,
       keyword:that.data.keyword,
-      key:"OZBBZ-64XLW-NPKRS-RJT75-CZYQJ-RZFUP",
+      key:"输入自己的哦~",
     },
   success:function(res){
     console.log(res.data)

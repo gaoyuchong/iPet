@@ -3,12 +3,11 @@
     </image>
   </view>
 <view class="container2">
-<button class="know" bindtap="know"><navigator url="../yiqing/yiqing" open-type="redirect">疫情数据</navigator></button>
 <button class="icw" bindtap="icw">宠物属性</button>
 <button class="meishi">
   <navigator url="../meishi/meishi" open-type="redirect">美食</navigator>
 </button>
-<button class="meishi">
+<button class="xinqing">
   <navigator url="../xinqing/xinqing" open-type="redirect">心情</navigator>
 </button>
 </view>

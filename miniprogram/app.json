@@ -1,8 +1,7 @@
 {
-  "pages": [    
+  "pages": [
     "pages/sy/sy",
     "pages/index/index",
-    "pages/yiqing/yiqing",
     "pages/xinqing/xinqing",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -19,7 +18,8 @@
     "pages/next/next",
     "pages/meishi/meishi",
     "pages/shudong/shudong",
-    "pages/contact/contact"
+    "pages/contact/contact",
+    "pages/denglu/denglu"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
